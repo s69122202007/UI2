@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>องค์การบริหารส่วนตำบลบ้านทุ่งทอง</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7f4;--surface:#fff;--ink:#14302a;--muted:#4b6259;--line:#d3ded7;--green:#1f6b45;--green-d:#14492f;--gold:#e0a526;--sky:#dcebf2;--ong:#fff;--ok:#1f7a3f;--err:#b3261e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a16;--surface:#17251f;--ink:#e8f1ec;--muted:#a3b7ad;--line:#2b3f36;--green:#5fb585;--green-d:#0d3a25;--sky:#1b2f38;--ong:#0b1a13;--ok:#6fd49a;--err:#ff8a80}}
+:root[data-theme="dark"]{--bg:#0f1a16;--surface:#17251f;--ink:#e8f1ec;--muted:#a3b7ad;--line:#2b3f36;--green:#5fb585;--green-d:#0d3a25;--sky:#1b2f38;--ong:#0b1a13;--ok:#6fd49a;--err:#ff8a80}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);font-size:17px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Thai",system-ui,sans-serif;line-height:1.7}
+h1,h2,h3{font-family:"Noto Serif Thai",Georgia,serif;line-height:1.35;margin:0 0 .5em}
+a{color:var(--green)}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header.top{background:var(--green-d);color:#fff;position:sticky;top:0;z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#14492f;z-index:21}
+.bar{display:flex;align-items:center;gap:14px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;margin-right:auto}
+.brand svg{width:44px;height:44px;flex:none}.brand b{display:block;font-family:"Noto Serif Thai",serif;font-size:1.05rem}.brand small{opacity:.8}
+nav{display:flex;gap:4px}nav a{color:#fff;text-decoration:none;padding:8px 14px;border-radius:8px;font-weight:500}
+nav a[aria-current=page]{background:var(--gold);color:#2a1d00}nav a:hover:not([aria-current]){background:rgba(255,255,255,.14)}
+.tools{display:flex;gap:6px}.tools button{background:rgba(255,255,255,.14);border:0;color:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-weight:600}
+.tools button:hover{background:rgba(255,255,255,.26)}
+.status{background:var(--sky);font-size:.9rem;padding:6px 0}.status .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:var(--muted)}.dot.on{background:var(--ok)}
+.hero{position:relative;background:var(--sky);overflow:hidden}
+.hero svg.scene{display:block;width:100%;height:auto;max-height:340px;min-height:200px}
+.hero .txt{position:absolute;inset:0;display:flex;align-items:center}
+.hero h1{font-size:clamp(1.5rem,4.2vw,2.6rem);color:#14302a;max-width:15em;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+.hero p{max-width:28em;color:#1d3a31;margin:0 0 14px}
+.btn{display:inline-block;background:var(--green);color:var(--ong);border:0;border-radius:10px;padding:11px 20px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--green-d);color:#fff}.btn.alt{background:var(--gold);color:#2a1d00}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:-28px 0 28px;position:relative}
+.quick a{background:var(--surface);border:1px solid var(--line);border-bottom:4px solid var(--gold);border-radius:12px;padding:16px 12px;text-align:center;text-decoration:none;color:var(--ink);font-weight:600;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.quick a:hover{border-bottom-color:var(--green)}.quick span{display:block;font-size:1.7rem}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.news article{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.news article:last-child{border:0}.news svg{width:100%;height:auto;border-radius:8px}
+.news time{color:var(--muted);font-size:.85rem}.news h3{font-size:1.05rem;margin:2px 0}
+.more{display:none}.open .more{display:block}.lnk{background:none;border:0;color:var(--green);padding:0;cursor:pointer;font-weight:600;text-decoration:underline}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stats div{background:var(--bg);border-radius:10px;padding:10px;text-align:center}.stats b{display:block;font-size:1.4rem;color:var(--green)}
+section.pg{display:none;padding:26px 0 50px}section.pg.show{display:block}
+.srch{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.srch input{flex:1;min-width:220px}
+input,select,textarea{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:9px;background:var(--surface)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.chips button{border:1.5px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 14px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--green);color:var(--ong);border-color:var(--green)}
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.svc details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.svc summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.svc summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}.svc details[open] summary::after{content:"−"}
+.svc dl{margin:10px 0 0;font-size:.93rem}.svc dt{font-weight:600;color:var(--green)}.svc dd{margin:0 0 6px}
+.empty{padding:24px;text-align:center;color:var(--muted)}
+label{display:block;font-weight:600;margin:12px 0 4px}.req::after{content:" *";color:var(--err)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.err{color:var(--err);font-size:.85rem;min-height:1.2em}input[aria-invalid=true],textarea[aria-invalid=true]{border-color:var(--err)}
+.ok{background:color-mix(in srgb,var(--ok) 14%,transparent);border:1px solid var(--ok);border-radius:10px;padding:12px 14px;margin-top:14px}
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:start}
+table{width:100%;border-collapse:collapse}td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+footer{background:var(--green-d);color:#d6e8dd;padding:24px 0;font-size:.9rem}footer a{color:#fff}
+@media(max-width:760px){.quick{grid-template-columns:1fr 1fr}.grid2,.contact,.row{grid-template-columns:1fr}.news article{grid-template-columns:100px 1fr}nav{width:100%}nav a{flex:1;text-align:center}.hero .txt{position:static;display:block;padding:18px 0}.hero svg.scene{max-height:170px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="#home"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#e0a526"/><path d="M8 32c6-8 12-10 16-10s10 2 16 10z" fill="#1f6b45"/><path d="M14 22l10-9 10 9z" fill="#14492f"/><rect x="17" y="22" width="14" height="10" fill="#fff"/></svg><span><b>อบต.บ้านทุ่งทอง</b><small>อำเภอเมือง จังหวัดตัวอย่าง</small></span></a>
+<nav aria-label="เมนูหลัก"><a href="#home">หน้าแรก</a><a href="#services">บริการประชาชน</a><a href="#contact">ติดต่อ / ร้องเรียน</a></nav>
+<div class="tools"><button id="fs" aria-label="ปรับขนาดตัวอักษร">A+</button><button id="th" aria-label="สลับโหมดมืด/สว่าง">◐</button></div>
+</div></header>
+<div class="status"><div class="wrap"><span><span id="dot" class="dot"></span><span id="st">กำลังตรวจสอบเวลาทำการ</span></span><span>โทร 0-5555-1234 · เปิดทำการ จ.–ศ. 08.30–16.30 น.</span></div></div>
+
+<main>
+<!-- หน้าแรก -->
+<section class="pg" id="home" data-title="หน้าแรก">
+<div class="hero"><svg class="scene" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMax slice" role="img" aria-label="ภาพทุ่งนาและที่ทำการ อบต.">
+<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd0e6"/><stop offset="1" stop-color="#f6eac4"/></linearGradient></defs>
+<rect width="1200" height="340" fill="url(#sk)"/><circle cx="960" cy="90" r="42" fill="#ffd36b"/>
+<path d="M0 190c120-40 220-30 340 0s240 30 360-10 300-30 500 20v140H0z" fill="#8fbf86"/>
+<path d="M0 235c150-30 300-20 450 5s300 15 450-10 200-10 300 0v110H0z" fill="#5fa266"/>
+<g stroke="#3f8650" stroke-width="3" fill="none" opacity=".6"><path d="M0 270c200-20 400-10 600 0s400 10 600-5"/><path d="M0 300c200-15 400-5 600 3s400 8 600-4"/></g>
+<g transform="translate(760 150)"><rect x="0" y="40" width="220" height="70" fill="#fff"/><path d="M-14 42l124-46 124 46z" fill="#b5532d"/><rect x="95" y="62" width="30" height="48" fill="#14492f"/><rect x="20" y="58" width="44" height="30" fill="#bcd8e6"/><rect x="156" y="58" width="44" height="30" fill="#bcd8e6"/><rect x="108" y="-44" width="4" height="50" fill="#555"/><rect x="112" y="-44" width="30" height="18" fill="#c6362b"/></g>
+<g fill="#2e6b3a"><ellipse cx="700" cy="230" rx="26" ry="38"/><rect x="697" y="250" width="6" height="30" fill="#6b4a2b"/><ellipse cx="1040" cy="232" rx="22" ry="34"/><rect x="1037" y="250" width="6" height="28" fill="#6b4a2b"/></g></svg>
+<div class="txt"><div class="wrap"><h1>บริการใกล้บ้าน ทำเรื่องได้ง่ายขึ้น</h1><p>ตรวจสอบเอกสาร นัดหมาย แจ้งเรื่องร้องเรียน และติดตามผลได้จากหน้าเว็บนี้</p><a class="btn alt" href="#services">ดูบริการทั้งหมด</a></div></div></div>
+<div class="wrap">
+<div class="quick"><a href="#services" data-q="ทะเบียน"><span>🪪</span>ขอเอกสารทะเบียน</a><a href="#services" data-q="ภาษี"><span>🧾</span>ชำระภาษี/ค่าธรรมเนียม</a><a href="#contact"><span>📣</span>แจ้งเรื่องร้องเรียน</a><a href="#services" data-q="เบี้ย"><span>👵</span>เบี้ยยังชีพ</a></div>
+<div class="grid2"><div class="card news"><h2>ข่าวประชาสัมพันธ์</h2><div id="news"></div></div>
+<aside><div class="card" style="margin-bottom:18px"><h3>ข้อมูลตำบล</h3><div class="stats"><div><b>12</b>หมู่บ้าน</div><div><b>8,420</b>ประชากร</div><div><b>3,106</b>ครัวเรือน</div><div><b>94 ตร.กม.</b>พื้นที่</div></div></div>
+<div class="card"><h3>เบอร์ฉุกเฉิน</h3><table><tr><td>กู้ภัย อบต.</td><td><a href="tel:055551199">0-5555-1199</a></td></tr><tr><td>สถานีตำรวจ</td><td><a href="tel:191">191</a></td></tr><tr><td>ไฟฟ้า</td><td><a href="tel:1129">1129</a></td></tr><tr><td>ประปา</td><td><a href="tel:1662">1662</a></td></tr></table></div></aside></div>
+</div></section>
+
+<!-- บริการประชาชน -->
+<section class="pg" id="services" data-title="บริการประชาชน"><div class="wrap">
+<h1>บริการประชาชน</h1><p style="color:var(--muted)">เลือกบริการเพื่อดูเอกสารที่ต้องเตรียม ค่าธรรมเนียม และระยะเวลา</p>
+<div class="srch"><input id="q" type="search" placeholder="ค้นหา เช่น ใบอนุญาต, ภาษี, เบี้ย" aria-label="ค้นหาบริการ"></div>
+<div class="chips" id="chips" role="group" aria-label="หมวดบริการ"></div>
+<div class="svc" id="svc" aria-live="polite"></div>
+<div class="card" style="margin-top:26px"><h2>นัดหมายล่วงหน้า</h2><p style="margin-top:0">จองวันเข้ารับบริการ ไม่ต้องรอคิวนาน</p>
+<form id="appt" novalidate><div class="row"><div><label class="req" for="an">ชื่อ-นามสกุล</label><input id="an" autocomplete="name"><div class="err"></div></div><div><label class="req" for="ap">เบอร์โทร</label><input id="ap" inputmode="tel" autocomplete="tel" placeholder="0812345678"><div class="err"></div></div></div>
+<div class="row"><div><label class="req" for="as">เรื่องที่ต้องการ</label><select id="as"></select></div><div><label class="req" for="ad">วันที่</label><input id="ad" type="date"><div class="err"></div></div></div>
+<p><button class="btn" type="submit">ยืนยันนัดหมาย</button></p><div id="aok" role="status"></div></form></div>
+</div></section>
+
+<!-- ติดต่อ / ร้องเรียน -->
+<section class="pg" id="contact" data-title="ติดต่อ / ร้องเรียน"><div class="wrap"><h1>ติดต่อ / ร้องเรียน</h1>
+<div class="contact"><div class="card"><h2>แจ้งเรื่องร้องเรียน</h2>
+<form id="cf" novalidate><label for="ct">ประเภทเรื่อง</label><select id="ct"><option>ถนน/ไฟฟ้าสาธารณะ</option><option>น้ำประปา/น้ำท่วม</option><option>ขยะ/สิ่งแวดล้อม</option><option>เสียงดัง/เหตุเดือดร้อนรำคาญ</option><option>อื่น ๆ</option></select>
+<label class="req" for="cn">ชื่อผู้แจ้ง</label><input id="cn" autocomplete="name"><div class="err"></div>
+<div class="row"><div><label class="req" for="cp">เบอร์โทร</label><input id="cp" inputmode="tel" autocomplete="tel"><div class="err"></div></div><div><label for="cv">หมู่ที่</label><select id="cv"></select></div></div>
+<label class="req" for="cd">รายละเอียด / จุดเกิดเหตุ</label><textarea id="cd" rows="4"></textarea><div class="err"></div>
+<p><button class="btn" type="submit">ส่งเรื่อง</button></p><div id="cok" role="status"></div></form>
+<hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3>ติดตามเรื่อง</h3>
+<form id="tf" style="display:flex;gap:10px"><input id="tn" placeholder="เลขที่รับเรื่อง เช่น TT-690001" aria-label="เลขที่รับเรื่อง"><button class="btn" type="submit">ตรวจสอบ</button></form><div id="tok" role="status" style="margin-top:10px"></div></div>
+<aside><div class="card" style="margin-bottom:18px"><h3>ที่ทำการ อบต.</h3><p style="margin:0">99 หมู่ 1 ต.บ้านทุ่งทอง อ.เมือง จ.ตัวอย่าง 10000<br>โทร <a href="tel:055551234">0-5555-1234</a> · อีเมล <a href="mailto:saraban@tungthong.go.th">saraban@tungthong.go.th</a></p>
+<h3 style="margin-top:14px">เวลาทำการ</h3><table><tr><td>จันทร์–ศุกร์</td><td>08.30–16.30 น.</td></tr><tr><td>พักกลางวัน</td><td>12.00–13.00 น.</td></tr><tr><td>เสาร์–อาทิตย์</td><td>ปิดทำการ</td></tr></table></div>
+<div class="card"><h3>ผู้บริหาร</h3><table><tr><td>นายก อบต.</td><td>นายสมชาย ใจดี</td></tr><tr><td>ปลัด อบต.</td><td>นางสาวมาลี รักถิ่น</td></tr></table><p style="font-size:.85rem;color:var(--muted);margin-bottom:0">ชื่อและข้อมูลเป็นตัวอย่าง</p></div></aside></div></div></section>
+</main>
+<footer><div class="wrap">© 2569 องค์การบริหารส่วนตำบลบ้านทุ่งทอง · เว็บไซต์ตัวอย่าง ข้อมูลทั้งหมดเป็นข้อมูลสมมติ</div></footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const SV=[
+{c:"ทะเบียน",n:"ขอสำเนาทะเบียนบ้าน / รับรองที่อยู่",d:["บัตรประชาชนตัวจริง","หนังสือมอบอำนาจ (กรณีมาแทน)"],f:"ฟรี",t:"ภายใน 15 นาที"},
+{c:"ทะเบียน",n:"แจ้งเกิด / แจ้งตาย",d:["ใบรับรองการเกิด/ตาย","ทะเบียนบ้าน","บัตรประชาชนผู้แจ้ง"],f:"ฟรี (แจ้งภายใน 15 วัน)",t:"ภายใน 30 นาที"},
+{c:"ภาษี",n:"ชำระภาษีที่ดินและสิ่งปลูกสร้าง",d:["ใบแจ้งประเมินภาษี","บัตรประชาชน","สำเนาโฉนดที่ดิน"],f:"ตามที่ประเมิน",t:"ทันที"},
+{c:"ภาษี",n:"ค่าธรรมเนียมขยะมูลฝอย",d:["ทะเบียนบ้านหรือเลขที่บ้าน"],f:"20 บาท/เดือน",t:"ทันที"},
+{c:"ใบอนุญาต",n:"ขออนุญาตก่อสร้าง ต่อเติม ดัดแปลงอาคาร",d:["แบบแปลนอาคาร","สำเนาโฉนด","หนังสือยินยอมเพื่อนบ้าน","สำเนาบัตรผู้ขอ"],f:"ตามขนาดอาคาร",t:"ภายใน 45 วัน"},
+{c:"ใบอนุญาต",n:"ขออนุญาตประกอบกิจการที่เป็นอันตรายต่อสุขภาพ",d:["คำร้องตามแบบ","สำเนาทะเบียนบ้านสถานที่","แผนผังสถานประกอบการ"],f:"200–5,000 บาท/ปี",t:"ภายใน 30 วัน"},
+{c:"สวัสดิการ",n:"ลงทะเบียนเบี้ยยังชีพผู้สูงอายุ",d:["บัตรประชาชน","ทะเบียนบ้าน","สมุดบัญชีธนาคาร"],f:"ฟรี",t:"ลงทะเบียน ต.ค.–พ.ย. ของทุกปี"},
+{c:"สวัสดิการ",n:"เบี้ยความพิการ",d:["บัตรประจำตัวคนพิการ","ทะเบียนบ้าน","สมุดบัญชีธนาคาร"],f:"ฟรี",t:"ภายใน 7 วันทำการ"},
+{c:"สาธารณสุข",n:"ขอรับบริการรถกู้ชีพ / รถน้ำ",d:["แจ้งชื่อ ที่อยู่ และจุดนัดรับ"],f:"ฟรี",t:"โทร 0-5555-1199 ตลอด 24 ชม."}];
+const CATS=["ทั้งหมด",...new Set(SV.map(s=>s.c))];let cat="ทั้งหมด";
+function paintSvc(){const q=$("#q").value.trim().toLowerCase();
+const r=SV.filter(s=>(cat=="ทั้งหมด"||s.c==cat)&&(s.n+s.c+s.d.join("")).toLowerCase().includes(q));
+$("#svc").innerHTML=r.length?r.map(s=>`<details><summary>${s.n}</summary><dl><dt>เอกสารที่ต้องใช้</dt><dd>${s.d.join(" · ")}</dd><dt>ค่าธรรมเนียม</dt><dd>${s.f}</dd><dt>ระยะเวลา</dt><dd>${s.t}</dd></dl></details>`).join(""):'<div class="empty" style="grid-column:1/-1">ไม่พบบริการที่ตรงกับคำค้น ลองใช้คำอื่น หรือเลือกหมวด “ทั้งหมด”</div>';
+$("#chips").innerHTML=CATS.map(c=>`<button type="button" aria-pressed="${c==cat}">${c}</button>`).join("");
+$$("#chips button").forEach(b=>b.onclick=()=>{cat=b.textContent;paintSvc()})}
+$("#q").oninput=paintSvc;
+$("#as").innerHTML=SV.map(s=>`<option>${s.n}</option>`).join("");
+$("#cv").innerHTML=Array.from({length:12},(_,i)=>`<option>หมู่ ${i+1}</option>`).join("");
+const NEWS=[["12 ต.ค. 2569","เปิดลงทะเบียนเบี้ยยังชีพผู้สูงอายุ ประจำปีงบประมาณ 2570","ผู้ที่จะมีอายุครบ 60 ปีบริบูรณ์ภายในวันที่ 30 กันยายน 2570 ยื่นคำขอได้ที่ อบต. ถึง 30 พฤศจิกายน นี้ พร้อมบัตรประชาชน ทะเบียนบ้าน และสมุดบัญชี","#7fb77e"],
+["8 ต.ค. 2569","ซ่อมไฟฟ้าสาธารณะและตัดแต่งกิ่งไม้ริมถนน หมู่ 3–7","ทีมช่างจะดำเนินการสัปดาห์นี้ หากพบหลอดไฟดับให้แจ้งผ่านแบบฟอร์มร้องเรียนในหน้า “ติดต่อ / ร้องเรียน”","#e0b251"],
+["1 ต.ค. 2569","เตรียมรับมือน้ำหลาก: จุดอพยพและเบอร์ติดต่อฉุกเฉิน","ศูนย์พักพิงชั่วคราวตั้งอยู่ที่โรงเรียนบ้านทุ่งทอง และวัดกลางทุ่ง โทรแจ้งเหตุที่ 0-5555-1199 ได้ตลอด 24 ชั่วโมง","#6fa8c9"]];
+$("#news").innerHTML=NEWS.map((n,i)=>`<article><svg viewBox="0 0 150 100" role="img" aria-label="ภาพประกอบข่าว"><rect width="150" height="100" fill="${n[3]}"/><circle cx="115" cy="25" r="12" fill="#fff" opacity=".7"/><path d="M0 70c30-20 60-10 90 0s40 10 60-5v35H0z" fill="#14492f" opacity=".55"/></svg><div><time>${n[0]}</time><h3>${n[1]}</h3><div class="more">${n[2]}</div><button class="lnk" type="button" aria-expanded="false">อ่านต่อ</button></div></article>`).join("");
+$$("#news .lnk").forEach(b=>b.onclick=()=>{const a=b.closest("article"),o=a.classList.toggle("open");b.textContent=o?"ย่อ":"อ่านต่อ";b.setAttribute("aria-expanded",o)});
+// routing
+function route(){const h=(location.hash||"#home").slice(1),id=["home","services","contact"].includes(h)?h:"home";
+$$("section.pg").forEach(s=>s.classList.toggle("show",s.id==id));
+$$("nav a").forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")=="#"+id)||0);
+$$("nav a").forEach(a=>{if(a.getAttribute("href")=="#"+id)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+document.title=$("#"+id).dataset.title+" · อบต.บ้านทุ่งทอง";window.scrollTo(0,0)}
+addEventListener("hashchange",route);
+$$(".quick a[data-q]").forEach(a=>a.addEventListener("click",()=>{$("#q").value=a.dataset.q;cat="ทั้งหมด";paintSvc()}));
+// open status (เวลาไทย)
+function status(){const p=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Bangkok",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+const g=t=>p.find(x=>x.type==t).value,m=+g("hour")*60+ +g("minute"),wd=!["Sat","Sun"].includes(g("weekday"));
+const on=wd&&m>=510&&m<990&&!(m>=720&&m<780);$("#dot").className="dot"+(on?" on":"");
+$("#st").textContent=on?"ขณะนี้เปิดทำการ":(wd&&m>=720&&m<780?"พักกลางวัน เปิดอีกครั้ง 13.00 น.":"ขณะนี้ปิดทำการ")}
+// forms
+const bad=(el,msg)=>{el.setAttribute("aria-invalid","true");const e=el.parentElement.querySelector(".err");if(e)e.textContent=msg;return 1};
+const clr=f=>f.querySelectorAll("[aria-invalid]").forEach(e=>{e.removeAttribute("aria-invalid");const x=e.parentElement.querySelector(".err");if(x)x.textContent=""});
+const phone=v=>/^0\d{8,9}$/.test(v.replace(/[-\s]/g,""));
+const ls={get(k){try{return JSON.parse(localStorage.getItem(k)||"{}")}catch(e){return{}}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+$("#ad").min=new Date().toISOString().slice(0,10);
+$("#appt").onsubmit=e=>{e.preventDefault();clr(e.target);let x=0;
+if(!$("#an").value.trim())x=bad($("#an"),"กรุณากรอกชื่อ-นามสกุล");
+if(!phone($("#ap").value))x=bad($("#ap"),"กรอกเบอร์โทร 9–10 หลัก เช่น 0812345678");
+const d=$("#ad").value;if(!d)x=bad($("#ad"),"กรุณาเลือกวันที่");else{const w=new Date(d).getDay();if(w==0||w==6)x=bad($("#ad"),"เลือกวันจันทร์–ศุกร์ (เสาร์–อาทิตย์ปิดทำการ)")}
+if(x)return;const dt=new Date(d).toLocaleDateString("th-TH",{dateStyle:"long"});
+$("#aok").innerHTML=`<div class="ok"><b>นัดหมายสำเร็จ</b><br>${$("#an").value.trim()} · ${$("#as").value}<br>วันที่ ${dt} เวลา 08.30–16.30 น. กรุณาแสดงหน้านี้ที่เคาน์เตอร์</div>`};
+$("#cf").onsubmit=e=>{e.preventDefault();clr(e.target);let x=0;
+if(!$("#cn").value.trim())x=bad($("#cn"),"กรุณากรอกชื่อผู้แจ้ง");
+if(!phone($("#cp").value))x=bad($("#cp"),"กรอกเบอร์โทร 9–10 หลัก");
+if($("#cd").value.trim().length<10)x=bad($("#cd"),"กรุณาอธิบายอย่างน้อย 10 ตัวอักษร พร้อมระบุจุดเกิดเหตุ");
+if(x)return;const all=ls.get("obt_cases"),no="TT-69"+String(Object.keys(all).length+1).padStart(4,"0");
+all[no]={t:$("#ct").value,at:new Date().toISOString()};ls.set("obt_cases",all);
+$("#cok").innerHTML=`<div class="ok"><b>รับเรื่องแล้ว</b><br>เลขที่รับเรื่อง <b>${no}</b> (จดไว้เพื่อติดตามผล)<br>เจ้าหน้าที่จะติดต่อกลับภายใน 3 วันทำการ</div>`;e.target.reset()};
+$("#tf").onsubmit=e=>{e.preventDefault();const k=$("#tn").value.trim().toUpperCase(),c=ls.get("obt_cases")[k];
+$("#tok").innerHTML=c?`<div class="ok">${k}: ${c.t}<br>สถานะ: <b>รับเรื่องแล้ว รอเจ้าหน้าที่ตรวจสอบ</b></div>`:'<span class="err">ไม่พบเลขที่รับเรื่องนี้ในอุปกรณ์เครื่องนี้ ตรวจสอบเลขอีกครั้ง หรือโทร 0-5555-1234</span>'};
+// tools
+let z=0;$("#fs").onclick=()=>{z=(z+1)%3;document.documentElement.style.fontSize=[17,19.5,22][z]+"px"};
+$("#th").onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue("--bg").trim()=="#0f1a16";r.dataset.theme=d?"light":"dark"};
+paintSvc();route();status();setInterval(status,60000);
+</script>
+</body>
+</html>
